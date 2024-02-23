@@ -8,14 +8,25 @@
   /// </remarks>
   public class MenuItem
   {
+        public MenuItem(int menuItemId, string menuItemDescription)
+        {
+            this.MenuItemId = menuItemId;
+            this.MenuItemDescription = menuItemDescription;
+        }
+
     /// <summary>
     /// Gets or sets the Menu Item Id.
     /// </summary>
     /// <remarks>
     /// You need to generate the menu item id.
     /// </remarks>
-    public int MenuItemId { get; set; }
+        public int MenuItemId { get; set; }
 
-    public string MenuItemDescription { get; set; } = string.Empty;
-  }
+        public string MenuItemDescription { get; set; } = string.Empty;
+
+        public override string ToString()
+        {
+            return $"{this.MenuItemId}. {this.MenuItemDescription}";
+        }
+    }
 }
